@@ -1,5 +1,6 @@
 from controller.item_controller import addItem, getItem, deleteItem, currency_converter, Adapter
 
+
 def test_addItem():
     assert addItem() == "Item agregado correctamente" or "Item no agregado"
 
@@ -14,4 +15,3 @@ def test_currency_converter():
 
 def test_adapter():
     assert Adapter != None or ""
-
