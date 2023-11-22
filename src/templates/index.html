@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Add Item</h1>
+            <form action="/add_item" method="POST">
+                <input type="text" name="sku" placeholder="SKU">
+                <input type="text" name="name" placeholder="Item Name">
+                <input type="text" name="description" placeholder="Description">
+                <input type="number" step="any" name="price" placeholder="Price">
+                <input type="number" name="quantity" placeholder="Quantity">
+                <input type="date" name="exp_date" placeholder="Exp_date">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+
+        <div>
+            <h1>Show Items</h1>
+            <form action="/get_item" method="GET">
+                <button type="submit">Show Items</button>
+            </form>
+           
+        </div>
+
+        <div>
+            <h1>Currency Convertion</h1>
+            <form action="/converter" method="GET">
+                <button type="submit">Currency Convertion</button>
+            </form>
+           
+        </div>
+
+        <div>
+            <h1>Delete Item</h1>
+            <form action="/delete_item" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <label for="item_id">Item ID:</label>
+                <input type="text" id="item_id" name="item_id" placeholder="Enter Item ID">
+                <button type="submit">Delete Item</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
